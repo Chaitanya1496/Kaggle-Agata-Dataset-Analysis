@@ -241,7 +241,7 @@ class Product_Sales_Details(object):
         total_sales_product_group = total_sales_product_group.sort_values(by=[self._net_sale_value])
 
         # Prompt user to get the number of products to be displayed
-        products_required = int(input('Number of best products to be displayed: '))
+        products_required = int(input('Number of least products to be displayed: '))
 
         # Plot
         self.plot_data(self._bar_plot, self._net_sale_value, self._product_group, total_sales_product_group.head(products_required), "Least Performing Category Of Products For The Year 2018")
